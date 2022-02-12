@@ -1,0 +1,367 @@
+/* Styling Hover, focus, and active states   */
+
+:root {
+  --color-focus-hover-color: #FF9900;
+  --color-active: #E1670E;
+}
+
+/* ---common----------------- */
+
+input:active, input:focus, select:active, select:focus, a:active, a:focus, button:focus, textarea:focus-visible, *:focus-visible {
+  outline: none;
+}
+
+.header__logo:focus, .footer__logo:focus {
+  outline: 2px solid var(--color-focus-hover-color);
+  outline-offset: 3px;
+  transition: outline 0.15s;
+}
+
+/* ---burger----------------- */
+
+.is-active+.burger:focus {
+  outline: none;
+}
+
+.burger:focus {
+  outline: 2px solid var(--color-focus-hover-color);
+  outline-offset: 3px;
+  transition: outline 0.15s;
+}
+
+.burger:active {
+  outline: none;
+}
+
+.burger:active .burger-line {
+  background-color: var(--color-active);
+}
+
+.burger:active .burger-line:nth-child(2) {
+  width: 83%;
+}
+
+.burger:active .burger-line:nth-child(3) {
+  width: 60%;
+}
+
+/* ----Header Mobile menu--- */
+
+.menu__link:focus {
+  outline: 2px solid var(--color-focus-hover-color);
+  outline-offset: 3px;
+  transition: outline 0.15s;
+}
+
+.menu__link:hover {
+  outline: none;
+}
+
+.menu__link {
+  position: relative;
+}
+
+.menu__link::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  left: -5px;
+  padding: 5px;
+  outline: none;
+  border-bottom: none;
+  transition: border-bottom 0.15s ease-in-out;
+}
+
+.menu__link:hover::before {
+  outline: none;
+  border-bottom: 2px solid var(--color-focus-hover-color);
+  transition: border-bottom 0.15s;
+}
+
+.menu__link:active::before {
+  outline: none;
+  border-bottom: 2px solid var(--color-active);
+  transition: border-bottom 0.15s;
+}
+
+.menu__link:active {
+  outline: none;
+  color: var(--color-active);
+  transition: color 0.15s;
+}
+
+/* ---Header nav---------------- */
+
+a:active, a:focus, a:hover {
+  transition: border-bottom 0.15s;
+}
+
+.nav__link:visited {
+  color: #333333;
+}
+
+.nav__link:focus {
+  outline: 2px solid var(--color-focus-hover-color);
+  outline-offset: 3px;
+  transition: outline 0.15s;
+}
+
+.nav__link:hover {
+  outline: none;
+}
+
+.nav__link::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -5px;
+  left: -5px;
+  padding: 5px;
+  outline: none;
+  border-bottom: none;
+  transition: border-bottom 0.15s ease-in-out;
+}
+
+.nav__link:hover::before {
+  outline: none;
+  border-bottom: 2px solid var(--color-focus-hover-color);
+  transition: border-bottom 0.15s;
+}
+
+/*
+.nav__link:focus::before {
+  outline: 2px solid var(--color-focus-hover-color);
+  transition: outline 0.15s;
+} */
+
+.nav__link:active::before {
+  outline: none;
+  border-bottom: 2px solid var(--color-active);
+  transition: border-bottom 0.15s;
+}
+
+.nav__link:active {
+  outline: none;
+  color: var(--color-active);
+  transition: color 0.15s;
+}
+
+/* ---Header search -------------------- */
+
+.header__search:hover .header__search-img rect {
+  fill: var(--color-focus-hover-color);
+  transition: fill 0.3s;
+}
+
+.header__search:hover .header__search-img path {
+  stroke: var(--color-focus-hover-color);
+  transition: stroke 0.3s;
+}
+
+.header__search::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: -2px;
+  left: -2px;
+  padding: 2px;
+  outline: 2px solid var(--color-focus-hover-color);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.header__search:focus::before {
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.header__search:hover::before {
+  opacity: 0;
+}
+
+/* ---Hero button-------------- */
+
+.swiper-pagination-clickable .swiper-pagination-bullet:focus {
+  outline: 2px solid var(--color-focus-hover-color);
+  transform: scale(1.3);
+  transition: outline 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.hero__btn:hover, .hero__btn:focus {
+  background: rgba(255, 153, 0, 0.7);
+}
+
+.hero__btn:active {
+  background: var(--color-active);
+}
+
+/* ---About - button ---------------- */
+
+.leftcolumn__btn:hover, .leftcolumn__btn:focus {
+  background: var(--color-focus-hover-color);
+}
+
+.about__leftcolumn__btn:active {
+  background: var(--color-active);
+  border-color: var(--color-active);
+}
+
+/* ---HOW - Tab's buttons ------------------------ */
+
+.steps-list__btn:hover {
+  color: var(--color-focus-hover-color);
+  outline: none;
+}
+
+.steps-list__btn:focus {
+  outline: 2px solid var(--color-focus-hover-color);
+  outline-offset: 3px;
+  transition: outline 0.15s;
+  border-radius: 0;   /*--For browser Edge (Chromium)--*/
+}
+
+.steps-list__btn:active {
+  color: var(--color-active);
+  outline: none;
+}
+
+/* ---HOW - buttons "Подробнее", "Договор"------------ */
+
+.how__step-btn:hover, .how__step-btn:focus {
+  background: #F7B045;
+  border-color: #F7B045;
+}
+
+.how__step-btn:active {
+  background: var(--color-active);
+  border-color: var(--color-active);
+}
+
+.how__step-agreement-link:hover, .how__step-agreement-link:focus {
+  background: #666666;
+  border-color: #666666;
+  color: var(--color-white);
+}
+
+.how__step-agreement-link:active {
+  background: #000000;
+  border-color: #000000;
+  color: var(--color-white);
+}
+
+/* ---FAQ -  questions list-----------------*/
+
+.faq-list__head:hover .faq-list__item_icon ellipse, .faq-list__head:focus .faq-list__item_icon ellipse {
+  fill: var(--color-focus-hover-color);
+}
+
+.faq-list__head:hover .faq-list__item_icon path, .faq-list__head:focus .faq-list__item_icon path {
+  fill: #FFFFFF;
+}
+
+.faq-list__head:active .faq-list__item_icon {
+  transform: rotate(45deg);
+}
+
+.ui-accordion .ui-state-active .faq-list__item_icon {
+  transform: rotate(45deg);
+}
+
+.ui-accordion .ui-state-active .faq-list__item_icon path {
+  fill: #666666;
+}
+
+.ui-accordion .ui-state-active .faq-list__item_icon ellipse {
+  fill: #ECECEC;
+}
+
+/* ---Footer - menu------------------- */
+
+.footer__menu_link:hover {
+  color: var(--color-focus-hover-color);
+  outline: none;
+}
+
+.footer__menu_link:focus {
+  outline: 2px solid var(--color-focus-hover-color);
+  outline-offset: 3px;
+  transition: outline 0.15s;
+}
+
+/* .footer__menu_link:focus::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px 5px;
+  right: -5px;
+  top: -3px;
+  outline: 2px solid var(--color-focus-hover-color);
+} */
+
+.footer__menu_link:active {
+  color: var(--color-active);
+  outline: none;
+}
+
+/* .footer__menu_link:active::before, .footer__menu_link:hover::before {
+  display: none;
+} */
+
+.form__top>*:hover, .form__top>*:focus, .form__top>*:active {
+  background: #666666;
+}
+
+.social__link:hover .social__item_img path {
+  fill: var(--color-focus-hover-color);
+}
+
+.social__link:active .social__item_img path {
+  fill: var(--color-active);
+}
+
+.social__link:focus::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -3px;
+  right: -3px;
+  padding: 3px;
+  outline: 2px solid var(--color-focus-hover-color);
+}
+
+.social__link:hover::before, .social__link:active::before {
+  display: none;
+}
+
+.form__bottom_submit-btn:hover, .form__bottom_submit-btn:focus {
+  background: #F7B045;
+}
+
+.form__bottom_submit-btn:active {
+  background: var(--color-active);
+}
+
+.form__bottom_checkbox:focus + span::before,
+.form__bottom_checkbox:focus + span {
+  color: var(--color-focus-hover-color);
+  border-color: var(--color-focus-hover-color);
+}
+
+.form__bottom_checkbox:hover + span::before,
+.form__bottom_checkbox:hover + span {
+  color: #CACACA;
+  border-color: #CACACA;
+}
+
+.form__bottom_checkbox:hover + .form__bottom_checkbox_descrip {
+  outline: 1px solid #CACACA;
+  outline-offset: 10px;
+}
