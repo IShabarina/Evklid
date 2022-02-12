@@ -1,4 +1,5 @@
 # Evklid
+- Index.html
 - Frontend practice - Website Evklid.
 - The following tasks achieved:
     * crossbrowser layout (Opera, Yandex, Chrome, Edge (Chromium), Firefox);
