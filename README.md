@@ -1,6 +1,6 @@
 # Evklid
 - Index.html
-- Frontend practice - Website Evklid - based on Figma:
+- Website Evklid - based on Figma maket:
   https://www.figma.com/file/ZckZUKF31dkAYWQQWufZtq/%D0%95%D0%B2%D0%BA%D0%BB%D0%B8%D0%B4-(new)?type=design&mode=design
   
 - The following tasks achieved:
